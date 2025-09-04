@@ -116,3 +116,23 @@ if uploaded_file:
                     mime="video/mp4"
                 )
         st.markdown("</div>", unsafe_allow_html=True)
+        # ------------------------------
+# Metadata Download Section
+# ------------------------------
+import os
+
+if os.path.exists("metadata.csv"):
+    st.subheader("📥 Download Metadata")
+    with open("metadata.csv", "rb") as f:
+        st.download_button(
+            label="⬇️ Download metadata.csv",
+            data=f,
+            file_name="metadata.csv",
+            mime="text/csv"
+        )
+else:
+    st.info("No metadata available yet.")
+
+
+
+
