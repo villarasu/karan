@@ -1,13 +1,33 @@
-streamlit
-ultralytics
-pillow
-opencv-python-headless
-pandas
+# --- Streamlit Framework ---
+streamlit>=1.35.0
 
+# --- Data Processing ---
+pandas>=2.2.2
+numpy>=1.26.4
 
+# --- AWS and S3 Access ---
+boto3>=1.34.130
+botocore>=1.34.130
 
+# --- Database Drivers ---
+psycopg2-binary>=2.9.9
+pgvector>=0.2.5
 
+# --- Machine Learning & NLP ---
+ultralytics>=8.2.50         # YOLO for object detection
+sentence-transformers>=2.7.0
+transformers>=4.41.0        # Required by sentence-transformers
+torch>=2.3.0                # PyTorch backend
+torchvision>=0.18.0
 
+# --- Image and File Handling ---
+Pillow>=10.3.0              # For image manipulation
+fpdf2>=2.7.9                # PDF generation (modern FPDF)
 
+# --- Networking and Utilities ---
+requests>=2.31.0
+email-validator>=2.1.0      # Optional: validate email addresses
+typing-extensions>=4.12.0   # Modern type hints support
 
-
+# --- Compatibility Fixes ---
+protobuf<5.0                # Prevents Streamlit protobuf conflicts
